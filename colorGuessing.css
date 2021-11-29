@@ -1,0 +1,77 @@
+@font-face {
+    font-family: 'BPdotsUnicase';
+    src: url('./font/BPdotsUnicase-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'BPdotsUnicase';
+}
+
+#container {
+    width: 100%;
+    height: 757px;
+    border: none;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-direction: column;
+}
+#top-container {
+    width: 100%;
+    height: 380px;
+    background: #333;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-direction: column;
+}
+/* bottom {
+    overflow: hidden;
+} */
+#btn {
+    align-self: center;
+    padding: 6px 20px 7px 20px;
+    outline: none;
+    border: 2px solid black;
+    border-radius: 6px;
+    background: coral;
+    font-size: 20px;
+    overflow: hidden;
+}
+#GtC {
+    font-size: 84px;
+    color: #fff;
+    text-shadow: 0 0 5px #aaa, 0 0 5px #aaa;
+}
+/* 
+#center-container {
+    width: 97%;
+    margin:auto;
+    height: 30px;
+    display: flex;
+    border: none;
+    justify-content: center;
+} */
+
+#bottom-container {
+    width: 100%;
+    height: 357px;
+    background: #eee;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.colorDiv {
+    cursor: pointer;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    border: 6px solid #fff;
+    box-shadow: 0 0 13px #ccc, 0 0 13px #ccc;
+}
