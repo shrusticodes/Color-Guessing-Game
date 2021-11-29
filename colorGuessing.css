@@ -12,6 +12,10 @@
     font-family: 'BPdotsUnicase';
 }
 
+body {
+    background: #eee;
+}
+
 #container {
     width: 100%;
     height: 757px;
@@ -23,12 +27,13 @@
 }
 #top-container {
     width: 100%;
-    height: 380px;
+    height: 400px;
     background: #333;
     display: flex;
     justify-content:space-around;
     align-items: center;
     flex-direction: column;
+    border-bottom: 10px solid #fff;
 }
 /* bottom {
     overflow: hidden;
@@ -48,23 +53,16 @@
     color: #fff;
     text-shadow: 0 0 5px #aaa, 0 0 5px #aaa;
 }
-/* 
-#center-container {
-    width: 97%;
-    margin:auto;
-    height: 30px;
-    display: flex;
-    border: none;
-    justify-content: center;
-} */
 
 #bottom-container {
     width: 100%;
-    height: 357px;
+    min-height: 357px;
     background: #eee;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
+    /* box-shadow: 0 0 8px #999; */
 }
 
 .colorDiv {
@@ -72,6 +70,74 @@
     width: 200px;
     height: 200px;
     border-radius: 100px;
-    border: 6px solid #fff;
+    border: 8px solid #fff;
     box-shadow: 0 0 13px #ccc, 0 0 13px #ccc;
+    margin: 10px 10px;
+}
+
+@media screen and (max-width: 1350px){
+
+    #top-container{
+        margin-bottom: 10px;
+    }
+
+    #bottom-container {
+        width: 700px;
+        height: 600px;
+    }
+
+
+
+}
+
+@media screen and (max-width: 850px){
+    #GtC {
+        font-size: 64px;
+    }
+}
+
+@media screen and (max-width: 750px){
+    .colorDiv {
+        width: 175px;
+        height: 175px;
+    }
+}
+
+@media screen and (max-width: 650px){
+    #GtC {
+        font-size: 48px;
+    }
+
+    #bottom-container {
+        width: 550px;
+        height: 1450px;
+    }
+
+}
+
+@media screen and (max-width: 550px){
+    #bottom-container {
+        width: 100%;
+        height: 1450px;
+    }
+    #GtC {
+        font-size: 38px;
+    }
+    .colorDiv {
+        width: 150px;
+        height: 150px;
+    }
+
+@media screen and (max-width: 350px){
+    #GtC {
+        font-size: 32px;
+    }
+
+    .colorDiv {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+
 }
