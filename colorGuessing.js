@@ -6,6 +6,18 @@ const div4 = document.getElementById('div4');
 const div5 = document.getElementById('div5');
 const div6 = document.getElementById('div6');
 
+// access to the top container
+const top_container = document.getElementById('top-container');
+const bottom_container = document.getElementById('bottom-container');
+
+//  The number of correct color guessing turns 
+let correctTurns = 0;
+
+//  Access to headline via variable
+const headline = document.getElementById('GtC');
+
+let wrongMove = 0;
+
 //  By loading the page the generateColor function generates six random Hexadecimal color values
 window.addEventListener('load', function generateColor(){
       let color1 = '#';
@@ -55,32 +67,54 @@ window.addEventListener('load', function generateColor(){
 
 //  We put these six colors in an array in which the randCol function randomly takes on a color
     function randCol(){
-        randomColors = [ color1, color2, color3, color4, color5, color6];
+        randomColors = [color1, color2, color3, color4, color5, color6];
         return randomColors[Math.floor(Math.random() * randomColors.length)];
     }
 
 //  We use the function which gives us just one hex color value of the six divs on the top container
     top_container.style.background = randCol();
-
-//  Access to headline via variable
-    const headline = document.getElementById('GtC');
-
-//  The number of correct color guessing turns 
-    let correctTurns = 0;
-    
+  
     const divs = document.querySelectorAll('.colorDiv');
 
-    divs.forEach(el => el.addEventListener('click', function(){
-/*
-    If the color we choose have the same color as the top container, correctTurns will increment by 1.
-    After that, the generateColor function generates new six colors 
-*/
-            if(top_container.style.background === el.style.background){
-                correctTurns++
-                headline.innerHTML = `<h1>${correctTurns}</h1>`;
-                generateColor();
-            }
-        
-    }))
-
+    divs.forEach(el => el.addEventListener('click', () => {
+    /*
+        If the color we choose have the same color as the top container, the generateColor
+        function generates new six colors and this happens after any correct click
+    */
+                if(top_container.style.background === el.style.background){
+                    generateColor(); 
+                }
+        }))
 });
+
+    const divs = document.querySelectorAll('.colorDiv');
+
+    divs.forEach(el => el.addEventListener('click', () => {
+    /*
+        If the color we choose have the same color as the top container, correctTurns will increment by 1.
+    */
+                if(top_container.style.background === el.style.background){
+                    correctTurns++;
+                    headline.innerHTML = `<h1>${correctTurns}</h1>`;
+                }
+
+                if(top_container.style.background !== el.style.background){
+                    wrongMove++;
+                    console.log(wrongMove);
+                }  
+                if(wrongMove == 5){
+                    div1.remove();
+                    div2.remove();
+                    div3.remove();
+                    div4.remove();
+                    div5.remove();
+                    div6.remove();
+                    bottom_container.remove();
+                    headline.innerHTML = ` you have ${correctTurns} points `;
+                }          
+        }))
+
+
+
+
+
