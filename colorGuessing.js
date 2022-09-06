@@ -85,7 +85,7 @@ window.addEventListener('load', function generateColor(){
                     generateColor(); 
                 }
         }))
-});
+    });
 
     const divs = document.querySelectorAll('.colorDiv');
 
@@ -98,10 +98,15 @@ window.addEventListener('load', function generateColor(){
                     headline.innerHTML = `<h1>${correctTurns}</h1>`;
                 }
 
+            // Outside the counter, counting is all the more accurate
+
                 if(top_container.style.background !== el.style.background){
                     wrongMove++;
                     console.log(wrongMove);
-                }  
+                }
+
+            // with 5 wrong turns, the game is over
+
                 if(wrongMove == 5){
                     div1.remove();
                     div2.remove();
@@ -112,7 +117,7 @@ window.addEventListener('load', function generateColor(){
                     bottom_container.remove();
                     headline.innerHTML = ` you have ${correctTurns} points `;
                 }          
-        }))
+            }));
 
 
 

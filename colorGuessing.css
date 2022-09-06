@@ -51,6 +51,7 @@ body {
 #GtC {
     font-size: 84px;
     color: #fff;
+    text-align: center;
     text-shadow: 0 0 5px #aaa, 0 0 5px #aaa;
 }
 
