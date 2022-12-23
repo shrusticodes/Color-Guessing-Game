@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'BPdotsUnicase';
+    src: url('./font/BPdotsUnicase-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    padding: 0;
+    margin: 0;
+    background: #404b5c;
+    box-sizing: border-box;
+    font-family: 'BPdotsUnicase';
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-height: 100vh;
+  }
+  p {
+    margin: 16px;
+    font-size: 96px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 600;
+    position: relative;
+    }
+  
+    button {
+        background-color:#a93b7b ;
+        border: none;
+        color:#ffffff;
+        padding: 50px;
+        text-align:justify;
+        font-weight: 600;
+        font-size: 70px;
+      }
+      .start {border-radius: 20px;}
+    
+  

@@ -95,7 +95,7 @@ window.addEventListener('load', function generateColor(){
     */
                 if(top_container.style.background === el.style.background){
                     correctTurns++;
-                    headline.innerHTML = `<h1>${correctTurns}</h1>`;
+                    headline.innerHTML = `<h3>score:${correctTurns}</h1>`;
                 }
 
             // Outside the counter, counting is all the more accurate
@@ -105,9 +105,9 @@ window.addEventListener('load', function generateColor(){
                     console.log(wrongMove);
                 }
 
-            // with 5 wrong turns, the game is over
+            // with 1 wrong turn, the game is over
 
-                if(wrongMove == 5){
+                if(wrongMove == 1){
                     div1.remove();
                     div2.remove();
                     div3.remove();
@@ -115,7 +115,7 @@ window.addEventListener('load', function generateColor(){
                     div5.remove();
                     div6.remove();
                     bottom_container.remove();
-                    headline.innerHTML = ` you have ${correctTurns} points `;
+                    headline.innerHTML = ` you have scored ${correctTurns} points `;
                 }          
             }));
 
