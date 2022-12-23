@@ -65,6 +65,16 @@ body {
     flex-wrap: wrap;
     /* box-shadow: 0 0 8px #999; */
 }
+.btn2{
+    border-radius: 10px;
+    background-color:#ffffff ;
+    border: none;
+    color:rgba(0, 7, 11, 0.992);
+    padding: 20px;
+    text-align:justify;
+    font-weight: 600;
+    font-size: 70px;
+}
 
 .colorDiv {
     cursor: pointer;
@@ -87,8 +97,6 @@ body {
         height: 600px;
     }
 
-
-
 }
 
 @media screen and (max-width: 850px){
@@ -101,7 +109,7 @@ body {
     .colorDiv {
         width: 175px;
         height: 175px;
-    }
+   }
 }
 
 @media screen and (max-width: 650px){
@@ -139,6 +147,4 @@ body {
         height: 140px;
     }
 }
-
-
 }

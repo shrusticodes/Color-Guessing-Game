@@ -116,6 +116,21 @@ window.addEventListener('load', function generateColor(){
                     div6.remove();
                     bottom_container.remove();
                     headline.innerHTML = ` you have scored ${correctTurns} points `;
+                    var myDiv = document.getElementById("top-container");
+                 
+                    // creating button element
+                    var button = document.createElement('BUTTON');
+                    var text = document.createTextNode("RESTART");
+                    button.className="btn2";
+                    button.addEventListener("click",btnFun);
+                    // appending text to button
+                    button.appendChild(text);
+                    function btnFun(){
+                        window.location.href="file:///C:/Users/Shrusti%20P%20Hulekal/OneDrive/Desktop/MilkVilla/Color-Guessing-Game/main_menu.html";
+                    }
+                     
+                    // appending button to div
+                    myDiv.appendChild(button); ;
                 }          
             }));
 
