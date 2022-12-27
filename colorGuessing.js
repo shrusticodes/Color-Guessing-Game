@@ -126,7 +126,8 @@ window.addEventListener('load', function generateColor(){
                     // appending text to button
                     button.appendChild(text);
                     function btnFun(){
-                        window.location.href="file:///C:/Users/Shrusti%20P%20Hulekal/OneDrive/Desktop/MilkVilla/Color-Guessing-Game/main_menu.html";
+                        // window.location.href="file:///C:/Users/Shrusti%20P%20Hulekal/OneDrive/Desktop/MilkVilla/Color-Guessing-Game/main_menu.html";
+                        window.location.href="/Users/apple/Desktop/projects/github/Color-Guessing-Game/main_menu.html";
                     }
                      
                     // appending button to div
